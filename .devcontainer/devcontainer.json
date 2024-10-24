@@ -1,0 +1,22 @@
+{
+	"name": "GenAI loves fstrings dev env",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+	"features": {
+		"ghcr.io/va-h/devcontainers-features/uv:1": {}
+	},
+	"postCreateCommand": "uv sync",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/workspaces/genai_loves_fstrings/.venv/bin/python",
+				"python.pythonPath":  "/workspaces/genai_loves_fstrings/.venv/bin/python",
+				"python.analysis.exclude": [
+					".venv"
+				]
+			}
+		}
+	}
+}
